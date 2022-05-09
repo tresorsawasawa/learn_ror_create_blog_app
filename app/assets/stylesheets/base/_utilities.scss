@@ -1,0 +1,21 @@
+@import './variables';
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  background-color: $bg-dark-color;
+  color: $white-color;
+  font-size: 1.2rem;
+}
+
+a {
+  color: $white-color;
+  cursor: pointer;
+}
