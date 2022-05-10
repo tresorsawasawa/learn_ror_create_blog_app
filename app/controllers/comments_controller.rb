@@ -12,8 +12,6 @@ class CommentsController < ApplicationController
 
     redirect_to article_path(@article), status: 303
   end
-    
-  end
 
   private
 
