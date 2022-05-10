@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root 'articles#index'
 
-  resources :articles
+  resources :articles do
+    resources :comments
+  end
   # get 'pages/hello'
   # root 'pages#hello'
   # get '/greeting', to: 'custom_pages#hello'
