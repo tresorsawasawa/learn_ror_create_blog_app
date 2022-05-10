@@ -6,7 +6,7 @@ class Article < ApplicationRecord
 
   VALID_STATUSES = ['public', 'private', 'archived']
 
-  validates :status, inclusion: { in VALID_STATUSES }
+  validates :status, inclusion: { in: VALID_STATUSES }
 
   def archived?
     status == 'archived'
