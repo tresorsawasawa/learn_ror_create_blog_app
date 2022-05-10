@@ -13,6 +13,19 @@
   </li>
 </ul>
 
+<h2>Comments</h2>
+<% @article.comments.each do |comment| %>
+  <p>
+    <strong>commenter:</strong>
+    <%= comment.commenter %>
+  </p>
+
+  <p>
+    <strong>comment:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
+
 <h2>Add a comment</h2>
 <%= form_with model: [ @article, @article.comments.build ] do |form| %>
   <p>
@@ -23,5 +36,9 @@
   <p>
     <%= form.label :body %><br>
     <%= form.text_area :body %>
+  </p>
+
+  <p>
+    <%= form.submit %>
   </p>
 <% end %>
